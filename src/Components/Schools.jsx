@@ -6,11 +6,12 @@ import SchoolDetail from './SchoolDetail';
 function Schools() {
     //state storing schools list
     const [schools, setSchools] = useState(null);
-    //load schools list on component mount
     
+    //load schools list on component mount
     useEffect(() => {
     getSchools();
     }, []);
+
     //api fetch request
     function getSchools() {
     const url = `http://hub-env.eba-ufpmtewu.us-east-1.elasticbeanstalk.com/schools`;
